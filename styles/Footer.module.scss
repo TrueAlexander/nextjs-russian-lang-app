@@ -1,0 +1,15 @@
+@import './variables.scss';
+
+.footer {
+  background-color: $color-bg-footer;
+  padding: 15px 0;
+
+  h4 {
+    text-shadow: 0 0 3px $color-bg-header;
+  }
+
+  a {
+    color: white;
+    text-decoration: none; 
+  }
+}
