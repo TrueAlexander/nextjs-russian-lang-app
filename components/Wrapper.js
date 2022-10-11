@@ -1,7 +1,7 @@
 import Header from './Header'
 import Footer from './Footer'
 
-const Layout = ({children}) => {
+const Wrapper = ({children}) => {
   return (
     <div className='container'>
       <Header/>
@@ -11,4 +11,4 @@ const Layout = ({children}) => {
   )
 }
 
-export default Layout
+export default Wrapper
