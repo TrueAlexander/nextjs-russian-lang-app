@@ -1,13 +1,18 @@
-import Heading from "../../components/Heading"
 import Link from "next/link"
+import Content from "../../components/Content"
+import styles from "./../../styles/Exercises.module.scss"
 
 const Item = () => (
-  <>
-    <Heading tag="h3" text="Verbs / Глаголы" />
+  <div className={styles.exercises}>
+    <h1>Verbs / Глаголы</h1>
+    <Content
+      link1="думать"
+      link2="жить"
+    />
     <Link href="./../exercises">
       <button className="btn">Volver a ejercicios</button> 
     </Link>
-  </>
+  </div>
 )
 
 export default Item

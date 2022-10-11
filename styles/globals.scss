@@ -5,6 +5,15 @@
   margin: 0;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   text-align: center;
+  box-sizing: border-box;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+h1 {
+  text-shadow: 0 0 3px $color-bg-footer;
 }
 
 .container {
@@ -19,6 +28,10 @@
   color: white;
 }
 
+main {
+  padding: 0 10px;
+  height: 100%;
+}
 
 .btn {
   display: block;
