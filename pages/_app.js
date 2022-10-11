@@ -4,10 +4,10 @@ import Wrapper from '../components/Wrapper'
 
 const MyApp = ({ Component, pageProps }) => ( 
   <>
-    <Head>
+    {/* <Head>
       <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
       <meta name="description" content="Aprender ruso practicando. Verbos, casos. Ejercicios interactivos"></meta>
-    </Head>
+    </Head> */}
     <Wrapper>
       <Component {...pageProps} />
     </Wrapper>   
