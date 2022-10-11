@@ -1,6 +1,14 @@
 @import './variables.scss';
 
 body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+html {
+  height: -webkit-fill-available;
+}
+
+body {
   padding: 0;
   margin: 0;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
@@ -12,6 +20,7 @@ body {
 .container {
   max-width: 500px;
   height: 100vh;
+ 
   margin: 0 auto;
   overflow: hidden;
   background-color: $color-bg-container;
