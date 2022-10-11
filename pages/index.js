@@ -9,7 +9,7 @@ const Home = () => {
       <h1>Добрó Пожáловать!</h1>
     </div>  
     <Link href="./exercises">
-      <button className="btn">Ir a ejercicios</button>
+      <button className="btn">Ir a ejercicios  &#8594;</button>
     </Link>
   </div> 
 )}

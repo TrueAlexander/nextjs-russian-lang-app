@@ -8,12 +8,21 @@
   box-sizing: border-box;
 }
 
+body {
+  height: 100vh;
+}
+
 ol, ul {
   list-style: none;
 }
 
 h1 {
   text-shadow: 0 0 3px $color-bg-footer;
+  background-color: rgba(255, 0, 0, 0.686);
+  max-width: fit-content;
+  padding: 4px 10px;
+  border-radius: 7px;
+  margin: 10px auto;
 }
 
 .container {
@@ -26,11 +35,6 @@ h1 {
   flex-direction: column;
   justify-content: space-between;
   color: white;
-}
-
-main {
-  padding: 0 10px;
-  height: 100%;
 }
 
 .btn {
