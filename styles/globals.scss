@@ -65,7 +65,8 @@ h2 {
 @media only screen and (orientation: landscape) {
   body {
     transform: rotate(90deg);
-    height: 100vh;
+    height: 100vw;
+    width: 100vh;
   }
   
 }
