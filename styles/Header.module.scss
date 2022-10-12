@@ -2,6 +2,10 @@
 
 .header {
   background-color: $color-bg-header;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   
   h2 {
     text-shadow: 0 0 6px $color-bg-footer;
