@@ -16,3 +16,9 @@
     text-decoration: none; 
   }
 }
+
+@media only screen and (orientation: landscape) {
+  .footer {
+    display: none;
+  }
+}

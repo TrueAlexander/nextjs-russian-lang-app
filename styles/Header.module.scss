@@ -11,3 +11,10 @@
     text-shadow: 0 0 6px $color-bg-footer;
   }
 }
+
+
+@media only screen and (orientation: landscape) {
+  .header {
+    display: none;
+  }
+}

@@ -62,11 +62,31 @@ h2 {
   margin: 10px auto;
 }
 
+.notice {
+  display: none;
+}
+
 @media only screen and (orientation: landscape) {
   body {
     transform: rotate(90deg);
     height: 100vh;
     width: 100vw;
+    background-color: $color-bg-container;
   }
-  
+
+  .container {
+    display: none;
+  }
+
+  .notice {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $color-bg-footer;
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+  } 
 }

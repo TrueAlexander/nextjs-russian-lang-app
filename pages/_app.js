@@ -1,9 +1,9 @@
 import '../styles/globals.scss'
 import Head from 'next/head'
-// import Wrapper from '../components/Wrapper'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import { useState, useEffect } from 'react'
+import Notice from '../components/Notice'
 
 const MyApp = ({ Component, pageProps }) => {
   // const [height, setHeight] = useState('500')
@@ -31,6 +31,7 @@ const MyApp = ({ Component, pageProps }) => {
       <Header/>
       <Component {...pageProps} />
       <Footer/>
+      <Notice/>
       <style jsx>{`
         .wrapper {
           height: ${dimensions.height}px;
