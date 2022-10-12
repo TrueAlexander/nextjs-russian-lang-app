@@ -15,7 +15,7 @@ const MyApp = ({ Component, pageProps }) => {
 
   useEffect(() => {
     // setHeight(window.innerHeight)
-    screen.orientation.lock("portrait")
+    // screen.orientation.lock("portrait")
     setDimensions({
       width: window.innerWidth,
       height: window.innerHeight
