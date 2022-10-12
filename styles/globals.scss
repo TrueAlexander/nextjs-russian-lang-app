@@ -62,7 +62,7 @@ h2 {
   margin: 10px auto;
 }
 
-@media only screen and (orientation: portrait) {
+@media only screen and (orientation: landscape) {
   body {
     transform: rotate(90deg);
   }
