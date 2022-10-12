@@ -3,7 +3,7 @@ import styles from './../styles/Home.module.scss'
 
 const Home = () => {
   return (
-  <div className={styles.home}>
+  <div className={styles.home + " container"}>
     <div>
       <h1>Bienvenidos!</h1>
       <h1>Добрó Пожáловать!</h1>

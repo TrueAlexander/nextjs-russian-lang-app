@@ -15,17 +15,18 @@ body {
 }
 
 .wrapper {
-  border: 1px solid orange;
   display: flex;
   flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .container {
-  flex: 1;
-  height: 300px;
-  margin: 0 auto;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: $color-bg-container;
-  color: white;
 }
 
 ol,
@@ -35,18 +36,24 @@ ul {
 
 h1 {
   text-shadow: 0 0 3px $color-bg-footer;
-  background-color: rgba(255, 0, 0, 0.686);
+  background-color: rgba(255, 0, 0, 0.5);
   max-width: fit-content;
   padding: 4px 10px;
   border-radius: 7px;
   margin: 10px auto;
 }
 
+h2 {
+  text-shadow: 0 0 3px $color-bg-header;
+  margin: 20px auto;
+  cursor: pointer;
+}
+
 .btn {
   display: block;
   border: 1px solid white;
   cursor: pointer;
-  background-color: $color-bg-footer;
+  background-color: $color-bg-footer-08;
   padding: 5px 10px;
   color: white;
   border-radius: 7px;

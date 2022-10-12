@@ -2,10 +2,7 @@
 
 
 .home {
-  flex: 1 1 auto;
   position: relative;
-  display: flex;
-  flex-direction: column;
   justify-content:flex-start;
   background-image: url('/initial.jpg');
   background-position: center;
@@ -34,5 +31,4 @@
   top: 0;
   left: 0;
   z-index: 0;
-
 }
