@@ -6,10 +6,20 @@ import Footer from '../components/Footer'
 import { useState, useEffect } from 'react'
 
 const MyApp = ({ Component, pageProps }) => {
-  const [height, setHeight] = useState('500')
+  // const [height, setHeight] = useState('500')
+
+  const [dimensions, setDimensions] = useState({
+    width: 1,
+    height: 1,
+  })
 
   useEffect(() => {
-    setHeight(window.innerHeight)
+    // setHeight(window.innerHeight)
+    screen.orientation.lock()
+    setDimensions({
+      width: window.innerWidth,
+      height: window.innerHeight
+    })
   }, [])
 
   return <div className='app'>
@@ -23,7 +33,8 @@ const MyApp = ({ Component, pageProps }) => {
       <Footer/>
       <style jsx>{`
         .wrapper {
-          height: ${height}px;
+          height: ${dimensions.height}px;
+          width: ${dimensions.width}px;
         }
       `}</style>
     </div>
