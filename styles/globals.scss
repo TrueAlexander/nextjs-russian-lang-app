@@ -68,14 +68,17 @@ h2 {
 
 @media only screen and (orientation: landscape) {
   body {
-    transform: rotate(90deg);
-    height: 100vh;
-    width: 100vw;
+    // transform: rotate(90deg);
+    // height: 100vh;
+    // width: 100vw;
     background-color: $color-bg-container;
   }
 
   .container {
     display: none;
+    transform: rotate(90deg);
+    height: 100vh;
+    width: 100vw;
   }
 
   .notice {
