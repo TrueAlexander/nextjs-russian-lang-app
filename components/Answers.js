@@ -1,17 +1,15 @@
 import styles from '../styles/Answers.module.scss'
 
-const Answers = ({id, verb}) => {
+const Answers = ({id, conjugations}) => {
  console.log(id)
-  console.log(verb)
+  console.log(conjugations)
   return (
     <div className={styles.answers}>
-      {} 
-      <span>Answer1</span>
-      <span>Answer2</span>
-      <span>Answer3</span>
-      <span>Answer4</span>
-      <span>Answer5</span>
-      <span>Answer6</span>
+      {conjugations.map((item, index) => {
+        const arrayAnswers = Object.values(item)
+        return arrayAnswers.map(answer => {
+          return <span key={index}>{answer[1]}</span>
+      })})} 
     </div>
   )
 }
