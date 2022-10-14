@@ -34,7 +34,6 @@ const First = ({verb}) => {
       })
       })}
       <Answers 
-        id={query.id} 
         conjugations={conjugations}
       />
       <span className={styles.comment}>Haga clic en la respuesta correcta</span>
