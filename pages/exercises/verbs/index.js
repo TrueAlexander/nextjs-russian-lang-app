@@ -2,14 +2,14 @@ import Link from 'next/link'
 import ButtonBack from '../../../components/ButtonBack'
 import verbsList from './../../../verbs.json'
 
-const Verbs = () => {
-  const allVerbs = verbsList.verbs
+const Verbs = ({verbs}) => {
+  // const allVerbs = verbsList.verbs
   
   return (
     <div className="container">
       <h1>Conjugación de verbos:</h1>
       <div>
-        {allVerbs.map(verb => {
+        {verbs.map(verb => {
           // const verbQuery = {
           //   id: verb.id,
           //   infinitive: verb.infinitive,
@@ -43,5 +43,11 @@ const Verbs = () => {
 
 export default Verbs
 
-
+export function getStaticProps(context) {
+  const verbs =  verbsList.verbs
+  
+  return {
+    props: {verbs}
+  }
+}
 

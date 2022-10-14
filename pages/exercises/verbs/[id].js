@@ -3,11 +3,11 @@ import ButtonBack from "../../../components/ButtonBack"
 import styles from "./../../../styles/Verbs.module.scss"
 import verbsList from './../../../verbs.json'
 
-const Verb = () => {
+const Verb = ({verb}) => {
 
   const {query} = useRouter()
-  const verb = verbsList.verbs[query.id]
-  console.log(verb)
+  // const verb = verbsList.verbs[query.id]
+  // console.log(verb)
 
   return (
     <div className={styles.verbs + " container"}>
@@ -43,3 +43,11 @@ const Verb = () => {
 }
 
 export default Verb
+
+export function getServerSideProps({params}) {
+  const verb =  verbsList.verbs[`${params.id}`]
+  
+  return {
+    props: {verb}
+  }
+}
