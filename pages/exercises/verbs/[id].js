@@ -2,7 +2,7 @@ import { useRouter } from "next/router"
 import ButtonBack from "../../../components/ButtonBack"
 import styles from "./../../../styles/Verbs.module.scss"
 
-const verb = () => {
+const Verb = () => {
 
   const {query} = useRouter()
 
@@ -39,4 +39,4 @@ const verb = () => {
   )
 }
 
-export default verb
+export default Verb
