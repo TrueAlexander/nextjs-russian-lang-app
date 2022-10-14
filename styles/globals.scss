@@ -27,6 +27,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   background-color: $color-bg-container;
+  position: relative;
 }
 
 ol,
@@ -52,7 +53,7 @@ h1 {
   background-color: $color-bg-header;
   border-radius: 5px;
   max-width: fit-content;
-  padding: 3px;
+  padding: 3px; 
 }
 
 .container h2.blue {
@@ -61,7 +62,7 @@ h1 {
   border: none;
   max-width: 100%;
   background: none;
-  // margin-top: 40px;
+  margin-top: 30px;
   span {
     color: $color-bg-header;
   }
@@ -78,6 +79,14 @@ h1 {
   font-size: 16px;
   text-transform: lowercase;
   margin: 10px auto 25px;
+}
+
+.btn-forward {
+  padding: 50px 5px;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .notice {

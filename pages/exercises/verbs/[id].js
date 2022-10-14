@@ -1,4 +1,5 @@
 import ButtonBack from "../../../components/ButtonBack"
+import ButtonForward from "../../../components/ButtonForward"
 import styles from "./../../../styles/Verbs.module.scss"
 import verbsList from './../../../verbs.json'
 
@@ -32,6 +33,7 @@ const Verb = ({verb}) => {
         <p><span>Ellos / Ellas</span>  <span>{verb.ellos[0]}</span></p>
       </div>
       <ButtonBack/>
+      <ButtonForward href="./../forward" />
     </div>
     
   )
