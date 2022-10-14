@@ -15,7 +15,7 @@ const Verb = () => {
       </div>
       <div>
         <h3><span>Ты</span>  <span>{query.tu[1]}</span></h3>
-        <p><span>Tu</span>  <span>{query.tu[0]}</span></p>
+        <p><span>Tú</span>  <span>{query.tu[0]}</span></p>
       </div>
       <div>
         <h3><span>Он / Она / Оно</span>  <span>{query.el[1]}</span></h3>

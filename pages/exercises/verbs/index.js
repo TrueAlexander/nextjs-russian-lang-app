@@ -18,7 +18,7 @@ const Verbs = () => {
             el: verb.el,
             nosotros: verb.nosotros,
             ustedes: verb.ustedes,
-            ellos: verb.ellos,
+            ellos: verb.ellos
           }
 
           return (
