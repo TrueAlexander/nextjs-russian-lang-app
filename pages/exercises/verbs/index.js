@@ -1,12 +1,13 @@
 import Link from 'next/link'
 import ButtonBack from '../../../components/ButtonBack'
-import verbsList from './../../../verbs.json'
+import verbsList from './../../../verbs-new.json'
+import styles from './../../../styles/Container.module.scss'
 
 const Verbs = ({verbs}) => {
   
   return (
     <div className="container">
-      <h2 className="blue">Conjugación de verbos:</h2>
+      <h2 className={styles.verbsTitle}>Conjugación de verbos:</h2>
       <div>
         {verbs.map(verb => {
           return (

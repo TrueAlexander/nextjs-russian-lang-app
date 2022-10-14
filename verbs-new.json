@@ -1,0 +1,39 @@
+{"verbs" : [
+  {
+    "id": 0,
+    "infinitive": "vivir / жи́ть",
+    "answers": [
+      {"yo": ["vivo", "живу́"]},
+      {"tu": ["vives", "живёшь"]},
+      {"el": ["vive", "живёт"]},
+      {"nosotros": ["vivimos", "живём"]},
+      {"ustedes": ["viven", "живёте"]},
+      {"ellos": ["viven", "живу́т"]} 
+    ]
+    
+  },
+  {
+    "id": 1,
+    "infinitive": "pensar / ду́мать",
+    "answers": [
+      {"yo": ["pienso", "ду́маю"]},
+      {"tu": ["piensas", "ду́маешь"]},
+      {"el": ["piensa", "ду́мает"]},
+      {"nosotros": ["pensamos", "ду́маем"]},
+      {"ustedes": ["piensan", "ду́маете"]},
+      {"ellos": ["piensan", "ду́мают"]}
+    ]
+  },
+  {
+    "id": 2,
+    "infinitive": "comer / есть",
+    "answers": [
+      {"yo": ["como", "ем"]},
+      {"tu": ["comes", "ешь"]},
+      {"el": ["come", "ест"]},
+      {"nosotros": ["comemos", "еди́м"]},
+      {"ustedes": ["comen", "еди́те"]},
+      {"ellos": ["comen", "едя́т"]}
+    ]
+  }
+]}

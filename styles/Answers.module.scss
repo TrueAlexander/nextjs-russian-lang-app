@@ -1,0 +1,18 @@
+@import './variables.scss';
+
+.answers {
+  background-color: $color-bg-footer-08;
+  padding: 5px 3px;
+  border: 1px solid white;
+
+  span {
+    color: white;
+    display: inline-block;
+    border: 1px dotted white;
+    background-color: $color-bg-header;
+    border-radius: 5px;
+    padding: 0 3px;
+    margin: 5px 10px;
+    cursor: pointer;
+  }
+}
