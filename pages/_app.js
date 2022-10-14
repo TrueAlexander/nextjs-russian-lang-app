@@ -24,6 +24,11 @@ const MyApp = ({ Component, pageProps }) => {
       if (portrait) notice.style.display = 'none'
       else notice.style.display = 'block'
     })
+
+    window.addEventListener("resize", () => setDimensions({
+      width: window.innerWidth,
+      height: window.innerHeight
+    }))
   }, [])
 
   return <div className='app'>

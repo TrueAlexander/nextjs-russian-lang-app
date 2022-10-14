@@ -44,10 +44,27 @@ h1 {
   border: 1px solid white;
 }
 
-h2 {
+.container h2 {
   text-shadow: 0 0 3px $color-bg-header;
   margin: 20px auto;
   cursor: pointer;
+  border: 1px solid white;
+  background-color: $color-bg-header;
+  border-radius: 5px;
+  max-width: fit-content;
+  padding: 3px;
+}
+
+.container h2.blue {
+  color: $color-bg-footer;
+  text-shadow: none;
+  border: none;
+  max-width: 100%;
+  background: none;
+  margin-top: 40px;
+  span {
+    color: $color-bg-header;
+  }
 }
 
 .btn {
@@ -60,12 +77,7 @@ h2 {
   border-radius: 7px;
   font-size: 16px;
   text-transform: lowercase;
-  margin: 10px auto;
-}
-
-.blue {
-  color: $color-bg-footer;
-  text-shadow: none;
+  margin: 10px auto 25px;
 }
 
 .notice {

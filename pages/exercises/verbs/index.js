@@ -3,33 +3,15 @@ import ButtonBack from '../../../components/ButtonBack'
 import verbsList from './../../../verbs.json'
 
 const Verbs = ({verbs}) => {
-  // const allVerbs = verbsList.verbs
   
   return (
     <div className="container">
-      <h1>Conjugación de verbos:</h1>
+      <h2 className="blue">Conjugación de verbos:</h2>
       <div>
         {verbs.map(verb => {
-          // const verbQuery = {
-          //   id: verb.id,
-          //   infinitive: verb.infinitive,
-          //   yo: verb.yo,
-          //   tu: verb.tu,
-          //   el: verb.el,
-          //   nosotros: verb.nosotros,
-          //   ustedes: verb.ustedes,
-          //   ellos: verb.ellos
-          // }
-
           return (
             <div key={verb.id}>
-              <Link 
-                href={`/exercises/verbs/${verb.id}`}
-                // href={{
-                //   pathname: `/exercises/verbs/${verb.id}`,
-                //   query: verbQuery
-                // }}
-              >
+              <Link href={`/exercises/verbs/${verb.id}`}>
                 <h2>{verb.infinitive} &#8594;</h2>
               </Link>
             </div>)
@@ -37,8 +19,7 @@ const Verbs = ({verbs}) => {
       </div>
       <ButtonBack/>
     </div>
-  )
-    
+  )   
 }
 
 export default Verbs

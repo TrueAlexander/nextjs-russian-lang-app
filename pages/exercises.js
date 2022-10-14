@@ -5,7 +5,7 @@ import ButtonBack from '../components/ButtonBack'
 const Exercises = () => {
   return (
   <div className={styles.exercises + " container"}>
-    <h1>Nuestros ejercicios:</h1>
+    <h2 className="blue">Nuestros ejercicios:</h2>
     <div>
       <Link href="./exercises/verbs">
         <h2>Verbos / Глагóлы &#8594;</h2>
