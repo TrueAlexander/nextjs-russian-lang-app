@@ -27,7 +27,7 @@ const First = ({verb}) => {
       return arrayAnswers.map(answer => {
         return (
           <div key={index}>
-            <h2><span>{pronouns[index][0]}</span>  <span>respuesta</span></h2>
+            <h2><span>{pronouns[index][0]}</span>  <span className="placeholder">respuesta</span></h2>
             <p><span>{pronouns[index][1]}</span>  <span>{answer[0]}</span></p>
           </div>
         )

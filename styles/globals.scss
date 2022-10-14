@@ -68,7 +68,7 @@ h1 {
   border-radius: 7px;
   font-size: 16px;
   text-transform: lowercase;
-  margin: 10px auto 25px;
+  margin: 10px auto 18px;
 }
 
 .btn-forward {
@@ -95,4 +95,9 @@ h1 {
     padding: 10px;
     margin: auto;
   }
+}
+
+/////styles for interactive
+.hide {
+  display: none !important;
 }
