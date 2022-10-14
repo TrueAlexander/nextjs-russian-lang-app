@@ -25,7 +25,7 @@ body {
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   background-color: $color-bg-container;
 }
 
@@ -36,11 +36,12 @@ ul {
 
 h1 {
   text-shadow: 0 0 3px $color-bg-footer;
-  background-color: rgba(255, 0, 0, 0.5);
+  background-color: rgba(255, 0, 0, 1);
   max-width: fit-content;
   padding: 4px 10px;
   border-radius: 7px;
-  margin: 10px auto;
+  margin: 40px auto 10px;
+  border: 1px solid white;
 }
 
 h2 {
@@ -62,34 +63,25 @@ h2 {
   margin: 10px auto;
 }
 
-.notice {
-  display: none;
+.blue {
+  color: $color-bg-footer;
+  text-shadow: none;
 }
 
-@media only screen and (orientation: landscape) {
-  body {
-    // transform: rotate(90deg);
-    // height: 100vh;
-    // width: 100vw;
-    background-color: $color-bg-container;
+.notice {
+  display: none;
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $color-bg-footer;
+  border-radius: 10px;
+  border: 2px solid white;
+  color: white;
+  
+  h3 {
+    padding: 10px;
+    margin: auto;
   }
-
-  .container {
-    display: none;
-    transform: rotate(90deg);
-    height: 100vh;
-    width: 100vw;
-  }
-
-  .notice {
-    display: block;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    background-color: $color-bg-footer;
-    color: white;
-    padding: 5px;
-    border-radius: 4px;
-  } 
 }

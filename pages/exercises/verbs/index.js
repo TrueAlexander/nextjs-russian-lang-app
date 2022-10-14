@@ -1,20 +1,46 @@
 import Link from 'next/link'
 import ButtonBack from '../../../components/ButtonBack'
+import verbsList from './../../../verbs.json'
 
-const verbs = () => {
+const Verbs = () => {
+  const allVerbs = verbsList.verbs
+  
   return (
     <div className="container">
-      <h1>Conjugación de verbos</h1>
-      <Link href="./item">
-        <h2>vivir / жи́ть &#8594;</h2>
-      </Link>
-      <Link href="./item2">
-      < h2>pensar / ду́мать &#8594;</h2>
-      </Link>
+      <h1>Conjugación de verbos:</h1>
+      <div>
+        {allVerbs.map(verb => {
+          const verbQuery = {
+            id: verb.id,
+            infinitive: verb.infinitive,
+            yo: verb.yo,
+            tu: verb.tu,
+            el: verb.el,
+            nosotros: verb.nosotros,
+            ustedes: verb.ustedes,
+            ellos: verb.ellos,
+          }
+
+          return (
+            <div key={verb.id}>
+              <Link 
+                href={{
+                  pathname: `/exercises/verbs/${verb.id}`,
+                  query: verbQuery
+                }}
+              >
+                <h2>{verb.infinitive} &#8594;</h2>
+              </Link>
+            </div>)
+          })}
+      </div>
       <ButtonBack/>
     </div>
   )
     
 }
 
-export default verbs
+export default Verbs
+
+
+

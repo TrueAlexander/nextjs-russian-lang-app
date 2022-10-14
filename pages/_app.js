@@ -6,7 +6,6 @@ import { useState, useEffect } from 'react'
 import Notice from '../components/Notice'
 
 const MyApp = ({ Component, pageProps }) => {
-  // const [height, setHeight] = useState('500')
 
   const [dimensions, setDimensions] = useState({
     width: 1,
@@ -14,11 +13,16 @@ const MyApp = ({ Component, pageProps }) => {
   })
 
   useEffect(() => {
-    // setHeight(window.innerHeight)
-    // screen.orientation.lock("portrait")
     setDimensions({
       width: window.innerWidth,
       height: window.innerHeight
+    })
+
+    window.matchMedia("(orientation:portrait)").addEventListener("change", e => {
+      const portrait = e.matches
+      const notice = document.querySelector('.notice')
+      if (portrait) notice.style.display = 'none'
+      else notice.style.display = 'block'
     })
   }, [])
 
@@ -39,7 +43,6 @@ const MyApp = ({ Component, pageProps }) => {
         }
       `}</style>
     </div>
-
   </div>
 }
 

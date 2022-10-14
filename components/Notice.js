@@ -1,6 +1,9 @@
-
 const Notice = () => {
-  return <h3 className="notice">gira la pantalla...</h3>
+  return (
+    <div className="notice">
+      <h3>gira la pantalla...</h3>
+    </div>
+  )
 }
 
 export default Notice

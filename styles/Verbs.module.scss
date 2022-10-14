@@ -1,0 +1,19 @@
+@import './variables.scss';
+
+.verbs {
+  h2 {
+    span {
+      color: $color-bg-header;
+      text-shadow: 0 0 2px white;
+    }
+  }
+
+  h3 {
+    text-shadow: 0 0 3px $color-bg-header;
+    margin: 5px 0;
+  }
+
+  p span {
+    color: $color-bg-footer;
+  }
+}

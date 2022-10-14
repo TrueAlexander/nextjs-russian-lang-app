@@ -2,19 +2,12 @@
 
 .header {
   background-color: $color-bg-header;
-  height: 50px;
+  height: 35px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   
   h2 {
     text-shadow: 0 0 6px $color-bg-footer;
-  }
-}
-
-
-@media only screen and (orientation: landscape) {
-  .header {
-    display: none;
   }
 }
