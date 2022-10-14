@@ -10,24 +10,25 @@ const Verbs = () => {
       <h1>Conjugación de verbos:</h1>
       <div>
         {allVerbs.map(verb => {
-          const verbQuery = {
-            id: verb.id,
-            infinitive: verb.infinitive,
-            yo: verb.yo,
-            tu: verb.tu,
-            el: verb.el,
-            nosotros: verb.nosotros,
-            ustedes: verb.ustedes,
-            ellos: verb.ellos
-          }
+          // const verbQuery = {
+          //   id: verb.id,
+          //   infinitive: verb.infinitive,
+          //   yo: verb.yo,
+          //   tu: verb.tu,
+          //   el: verb.el,
+          //   nosotros: verb.nosotros,
+          //   ustedes: verb.ustedes,
+          //   ellos: verb.ellos
+          // }
 
           return (
             <div key={verb.id}>
               <Link 
-                href={{
-                  pathname: `/exercises/verbs/${verb.id}`,
-                  query: verbQuery
-                }}
+                href={`/exercises/verbs/${verb.id}`}
+                // href={{
+                //   pathname: `/exercises/verbs/${verb.id}`,
+                //   query: verbQuery
+                // }}
               >
                 <h2>{verb.infinitive} &#8594;</h2>
               </Link>
