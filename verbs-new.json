@@ -35,5 +35,41 @@
       {"ustedes": ["comen", "еди́те"]},
       {"ellos": ["comen", "едя́т"]}
     ]
+  },
+  {
+    "id": 3,
+    "infinitive": "trabajar / рабóтать",
+    "answers": [
+      {"yo": ["trabajo", "рабóтаю"]},
+      {"tu": ["trabajas", "рабóтаешь"]},
+      {"el": ["trabaja", "рабóтает"]},
+      {"nosotros": ["trabajamos", "рабóтаем"]},
+      {"ustedes": ["trabajan", "рабóтаете"]},
+      {"ellos": ["trabajan", "рабóтают"]}
+    ]
+  },
+  {
+    "id": 4,
+    "infinitive": "amar / люби́ть",
+    "answers": [
+      {"yo": ["amo", "люблю́"]},
+      {"tu": ["amas", "лю́бишь"]},
+      {"el": ["ama", "лю́бит"]},
+      {"nosotros": ["amamos", "лю́бим"]},
+      {"ustedes": ["aman", "лю́бите"]},
+      {"ellos": ["aman", "лю́бят"]}
+    ]
+  },
+  {
+    "id": 5,
+    "infinitive": "cantar / петь",
+    "answers": [
+      {"yo": ["canto", "пою́"]},
+      {"tu": ["cantas", "поёшь"]},
+      {"el": ["canta", "поёт"]},
+      {"nosotros": ["cantamos", "поём"]},
+      {"ustedes": ["cantan", "поёте"]},
+      {"ellos": ["cantan", "пою́т"]}
+    ]
   }
 ]}

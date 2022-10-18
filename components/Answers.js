@@ -22,17 +22,8 @@ const Answers = ({conjugations, setChosen, setCheckResults}) => {
   }
 
   const clickResult = () => {
-    console.log('show results')
     setCheckResults(true)
-    //1) compare arrays and comment results:
-    //if (arr[i] = arr[j]) {
-    // arr[i].addclass('correct') + comment('correcto')
-    // } else arr[i].addclass('wrong') + comment('incorrecto') + show the right option
   }
-
-      //2) enable forward button to the next [first] page with mixed lines
-    //3) mix the lines and render th next [first page]
-    //
   
   return (
     <div className={countClick < 6 ? styles.answers : ""}>
@@ -51,7 +42,7 @@ const Answers = ({conjugations, setChosen, setCheckResults}) => {
           className={styles.btn}
           onClick={clickResult}
         >
-          Su resultado
+          Ver resultado
         </button>} 
     </div>
   )

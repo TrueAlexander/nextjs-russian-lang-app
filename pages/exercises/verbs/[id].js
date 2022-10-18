@@ -1,8 +1,6 @@
 import ButtonBack from "../../../components/ButtonBack"
-// import ButtonForward from "../../../components/ButtonForward"
 import styles from "./../../../styles/Container.module.scss"
 import verbsList from '../../../verbs-new.json'
-import Link from 'next/link'
 import Read from "../../../components/Read"
 import Interact from "../../../components/Interact"
 import { useState } from "react"
