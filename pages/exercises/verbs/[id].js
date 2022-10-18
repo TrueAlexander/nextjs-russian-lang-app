@@ -1,11 +1,16 @@
 import ButtonBack from "../../../components/ButtonBack"
-import ButtonForward from "../../../components/ButtonForward"
+// import ButtonForward from "../../../components/ButtonForward"
 import styles from "./../../../styles/Container.module.scss"
 import verbsList from '../../../verbs-new.json'
 import Link from 'next/link'
+import Read from "../../../components/Read"
+import Interact from "../../../components/Interact"
+import { useState } from "react"
 
 const Verb = ({verb}) => {
-  
+
+  const [interact, setInteract] = useState(true)
+
   const conjugations = verb.answers
   const pronouns = [
     ["Я", "Yo"],
@@ -17,35 +22,21 @@ const Verb = ({verb}) => {
   ]
 
   return (
-    <div className={styles.verbs + " container"}>
+    <div className={interact 
+      ? styles.verbsAction + " container" 
+      : styles.verbs + " container"}
+    >
       <h2 className={styles.verbsTitle}>Conjugación del verbo: <span>{verb.infinitive}</span></h2>
-      <p className="comment">Lee y recuerda conjugaciones</p>
-      {conjugations.map((item, index) => {
-
-        const arrayAnswers = Object.values(item)
-        return arrayAnswers.map(answer => {
-          return (
-            <div key={index}>
-              <h2><span>{pronouns[index][0]}</span>  <span>{answer[1]}</span></h2>
-              <p><span>{pronouns[index][1]}</span>  <span>{answer[0]}</span></p>
-            </div>
-          )
-        })
-      })}
-      <ButtonBack/>
-      <Link href={`../../exercises/verbs/${verb.id}/rounds`}>
-        <button
+      {interact 
+        ? <Interact conjugations={conjugations} pronouns={pronouns} />
+        : <Read conjugations={conjugations} pronouns={pronouns} />}
+      <button
         className="btn btn-forward"
-        >
-          &#8594;
-        </button>
-      </Link>
-      {/* <ButtonForward 
-        // href={`./exercises/verbs/${verb.id}`}
-        href={`./exercises/verbs/${verb.id}/rounds`}
-        num={0}
-       
-      /> */}
+        onClick={() => setInteract(!interact)}
+      >
+        &#8594;
+      </button>
+      <ButtonBack/>
     </div>
     
   )
