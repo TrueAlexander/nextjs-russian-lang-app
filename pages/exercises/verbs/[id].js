@@ -4,7 +4,7 @@ import styles from "./../../../styles/Container.module.scss"
 import verbsList from './../../../verbs-new.json'
 
 const Verb = ({verb}) => {
-
+  
   const conjugations = verb.answers
   const pronouns = [
     ["Я", "Yo"],
@@ -18,6 +18,7 @@ const Verb = ({verb}) => {
   return (
     <div className={styles.verbs + " container"}>
       <h2 className={styles.verbsTitle}>Conjugación del verbo: <span>{verb.infinitive}</span></h2>
+      <p className="comment">Lee y recuerda conjugaciones</p>
       {conjugations.map((item, index) => {
 
         const arrayAnswers = Object.values(item)
@@ -32,8 +33,10 @@ const Verb = ({verb}) => {
       })}
       <ButtonBack/>
       <ButtonForward 
-        href={`./exercises/verbs/${verb.id}`} 
-        verb={verb} 
+        // href={`./exercises/verbs/${verb.id}`}
+        href={`./exercises/verbs/${verb.id}`}
+        num={0}
+       
       />
     </div>
     

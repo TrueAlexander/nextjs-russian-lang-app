@@ -86,7 +86,7 @@ h1 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: $color-bg-footer;
+  background-color: black;
   border-radius: 10px;
   border: 2px solid white;
   color: white;
@@ -104,4 +104,29 @@ h1 {
 
 .red {
   background-color: $color-bg-header !important;
+}
+
+.comment {
+  color: $color-bg-footer;
+}
+
+div.res {
+  position: absolute;
+  background-color: none;
+  background-position: center;
+  background-size: cover;
+  display: inline-block;
+  border-radius: 50%;
+  height: 12px;
+  width: 12px;
+  transform: translate(5px, -10px);
+
+}
+
+div.res.false {
+  background-image: url('/false.png');
+}
+
+div.res.true {
+  background-image: url('/true.png');
 }

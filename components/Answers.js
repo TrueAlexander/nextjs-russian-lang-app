@@ -1,7 +1,7 @@
 import styles from '../styles/Answers.module.scss'
 import { useEffect, useState } from 'react'
 
-const Answers = ({conjugations, setChosen}) => {
+const Answers = ({conjugations, setChosen, setCheckResults}) => {
 
   const [array, setArray] = useState(conjugations)
   const [countClick, setCountClick] = useState(0)
@@ -15,11 +15,24 @@ const Answers = ({conjugations, setChosen}) => {
     setArray(toRender)
   }, [])
 
-  const clickHandler = (e) => {
+  const clickChoose = (e) => {
     e.target.classList.add('hide')
     setChosen(prev => prev + " " + e.target.innerText)
     setCountClick(prev => prev + 1)
   }
+
+  const clickResult = () => {
+    console.log('show results')
+    setCheckResults(true)
+    //1) compare arrays and comment results:
+    //if (arr[i] = arr[j]) {
+    // arr[i].addclass('correct') + comment('correcto')
+    // } else arr[i].addclass('wrong') + comment('incorrecto') + show the right option
+  }
+
+      //2) enable forward button to the next [first] page with mixed lines
+    //3) mix the lines and render th next [first page]
+    //
   
   return (
     <div className={countClick < 6 ? styles.answers : ""}>
@@ -28,13 +41,18 @@ const Answers = ({conjugations, setChosen}) => {
         return arrayAnswers.map(answer => {
           return (
           <span
-            onClick={clickHandler} 
+            onClick={clickChoose} 
             key={ind}>
               {answer[1]}
             </span>
           )
       })})
-      : <button className={styles.btn}>Su resultado</button> } 
+      : <button 
+          className={styles.btn}
+          onClick={clickResult}
+        >
+          Su resultado
+        </button>} 
     </div>
   )
 }

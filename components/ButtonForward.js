@@ -1,18 +1,15 @@
 import Link from "next/link"
 
-const ButtonForward = ({href, verb}) => {
 
+const ButtonForward = ({href, num}) => {
+  
   return ( 
       <Link
-        href={`/${href}/${verb.id}`}
-        // href={{
-        //   pathname: `/${href}/${verb.id}`,
-          // query: {
-          //   verb: {verb}
-          // } 
-        // }}
+        href={`/${href}/${num}`}
       >
-        <button className="btn btn-forward">
+        <button 
+          className="btn btn-forward"
+        >
           &#8594;
         </button>
       </Link>
