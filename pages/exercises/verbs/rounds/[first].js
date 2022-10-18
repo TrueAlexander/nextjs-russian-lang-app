@@ -29,10 +29,20 @@ const First = ({verb}) => {
  
 
   useEffect(() => {
-    if (checkResults) console.log('now results are ....')
+    if (checkResults) compare()
+
   }, [checkResults])
   
-
+  
+      const compare = () => {
+        console.log(result)
+        console.log(Object.values(conjugations))
+        const conj = Object.values(conjugations)
+        return result.map((item, index) => {
+          console.log(Object.values(conj[index])[1])
+        })
+      }
+      
 
   return (
     <div className={styles.verbsAction + " container"}>
@@ -43,9 +53,8 @@ const First = ({verb}) => {
 
 
 
-      console.log(result)
-      console.log(arrayAnswers)
       
+
       return arrayAnswers.map(answer => {
         return (
           <div key={index}>

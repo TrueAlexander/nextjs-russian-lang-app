@@ -1,7 +1,8 @@
 import ButtonBack from "../../../components/ButtonBack"
 import ButtonForward from "../../../components/ButtonForward"
 import styles from "./../../../styles/Container.module.scss"
-import verbsList from './../../../verbs-new.json'
+import verbsList from '../../../verbs-new.json'
+import Link from 'next/link'
 
 const Verb = ({verb}) => {
   
@@ -32,12 +33,19 @@ const Verb = ({verb}) => {
         })
       })}
       <ButtonBack/>
-      <ButtonForward 
+      <Link href={`../../exercises/verbs/${verb.id}/rounds`}>
+        <button
+        className="btn btn-forward"
+        >
+          &#8594;
+        </button>
+      </Link>
+      {/* <ButtonForward 
         // href={`./exercises/verbs/${verb.id}`}
-        href={`./exercises/verbs/${verb.id}`}
+        href={`./exercises/verbs/${verb.id}/rounds`}
         num={0}
        
-      />
+      /> */}
     </div>
     
   )
@@ -47,7 +55,6 @@ export default Verb
 
 export function getServerSideProps({params}) {
   const verb =  verbsList.verbs[`${params.id}`]
-  
   return {
     props: {verb}
   }
